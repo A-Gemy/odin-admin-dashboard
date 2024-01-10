@@ -1,6 +1,23 @@
+/*
+--- FONT SIZE SYSTEM (px):
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 /
+36 / 44 / 52 / 62 / 74 / 86 / 98
+
+--- WHITE SPACE SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 /
+64 / 80 / 96 / 128
+*/
+
 /***************
   General styles
 ****************/
+:root {
+  --main-color: #1992d4;
+  --main-padding: 3.2rem;
+}
+/* Font family */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
 html {
   box-sizing: border-box;
   font-size: 10px;
@@ -8,6 +25,7 @@ html {
 
 body {
   line-height: 1.5;
+  font-family: "Roboto", sans-serif;
 }
 
 *,
@@ -16,4 +34,87 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+}
+
+/******************/
+/* Layout */
+/******************/
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+/******************/
+/* Start aside */
+/******************/
+aside {
+  background-color: var(--main-color);
+  padding: var(--main-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+
+aside img {
+  max-width: 100%;
+  filter: brightness(0) invert(1);
+}
+
+.logo {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.logo_icon {
+  max-width: 4.4rem;
+  cursor: pointer;
+}
+
+.logo h2 a {
+  display: inline-block;
+  font-size: 2.4rem;
+  color: white;
+  text-decoration: none;
+}
+
+.aside_navigation,
+.aside_footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.aside_navigation div,
+.aside_footer div {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.aside_navigation div p,
+.aside_footer div p {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.aside_icon {
+  max-width: 24px;
+}
+
+.aside_navigation div p,
+.aside_footer div p,
+.aside_icon {
+  cursor: pointer;
+}
+
+.aside_footer {
+  margin-top: auto;
+  margin-bottom: 2.4rem;
+}
+
+main {
+  padding: var(--main-padding);
 }
