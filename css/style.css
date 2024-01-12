@@ -36,6 +36,9 @@ body {
   box-sizing: inherit;
 }
 
+img {
+  max-width: 100%;
+}
 /******************/
 /* Layout */
 /******************/
@@ -57,7 +60,6 @@ aside {
 }
 
 aside img {
-  max-width: 100%;
   filter: brightness(0) invert(1);
 }
 
@@ -115,6 +117,144 @@ aside img {
   margin-bottom: 2.4rem;
 }
 
+/******************/
+/* Start main */
+/******************/
+
 main {
-  padding: var(--main-padding);
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+/******************/
+/* Start header */
+/******************/
+
+.header {
+  padding: var(--main-padding) 4.8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+  align-items: center;
+}
+
+.header .search {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.header .search .magnify_holder {
+  display: flex;
+  align-items: center;
+  width: 2.4rem;
+}
+
+.header .search_holder {
+  flex: 1;
+}
+
+.header .search_holder input {
+  border: none;
+  background-color: #e2e8f0;
+  padding: 1.2rem 1.6rem;
+  border-radius: 2rem;
+  width: 100%;
+  font-size: 1.6rem;
+  outline: none;
+}
+
+.notification {
+  justify-self: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  margin-right: 1.6rem;
+}
+
+.bell_holder {
+  width: 2.4rem;
+}
+
+.account_holder {
+  width: 4.8rem;
+}
+
+.account_holder img {
+  border-radius: 50%;
+}
+
+.notification p.account_name {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.magnify_holder img,
+.bell_holder img,
+.account_holder img,
+.notification p.account_name {
+  cursor: pointer;
+}
+
+/******************/
+/* Start account */
+/******************/
+.account {
+  padding: 1.6rem 4.8rem 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.profile_img {
+  width: 7.4rem;
+}
+
+.profile_img img {
+  border-radius: 50%;
+}
+
+.info_box {
+  padding-top: 0.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.info_box p {
+  font-size: 1.6rem;
+  margin-bottom: 0.2rem;
+}
+
+.info_box h2 {
+  font-size: 2rem;
+}
+
+.buttons {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 3.2rem;
+}
+
+.btn {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  flex: 1;
+  padding: 1.2rem 2.4rem;
+  border-radius: 2.4rem;
+  cursor: pointer;
+}
+
+/******************/
+/* Start articles */
+/******************/
+.articles {
+  background-color: #e2e8f0;
 }
