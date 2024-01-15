@@ -131,7 +131,7 @@ main {
 /******************/
 
 .header {
-  padding: var(--main-padding) 4.8rem;
+  padding: 2.4rem 4.8rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3.2rem;
@@ -318,7 +318,84 @@ main {
 /******************/
 /* Start right sidebar */
 /******************/
-/* For better visualization */
-.right-sidebar .trending .box .img {
+.right-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+/******************/
+/* Start announcements */
+/******************/
+.announcements h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.announcements_boxes {
+  background-color: white;
+  border-radius: 1.2rem;
+  padding: 2.4rem 3.2rem;
+}
+
+.announcements_boxes .item:nth-child(1) {
+  padding-bottom: 1.8rem;
+}
+
+.announcements_boxes .item:nth-child(3) {
+  padding-top: 1.8rem;
+}
+
+.announcements_boxes .item:nth-child(2) {
+  padding: 1.6rem 0;
+  border-bottom: 1px solid #d2d2d2;
+  border-top: 1px solid #d2d2d2;
+}
+
+.announcements_boxes .item h5 {
+  font-size: 1.6rem;
+}
+
+.announcements_boxes .item p {
+  font-size: 1.4rem;
+  line-height: 1.3;
+  color: #555;
+}
+
+/******************/
+/* Start trending */
+/******************/
+.trending h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.trending_boxes {
+  background-color: white;
+  border-radius: 1.2rem;
+  padding: 2.4rem;
+  display: grid;
+  gap: 1.6rem;
+}
+
+.trending_boxes .box {
+  display: flex;
+  gap: 2rem;
+}
+
+.trending_boxes .box .img {
   width: 4.4rem;
+}
+
+.trending_boxes .box .img img {
+  border-radius: 50%;
+}
+
+.user_info .username {
+  font-size: 1.4rem;
+}
+
+.user_info .title {
+  font-size: 1.2rem;
+  color: #737373;
 }
